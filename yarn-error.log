@@ -14,7 +14,7 @@ Platform:
   android arm64
 
 Trace: 
-  SyntaxError: /data/data/com.termux/files/home/rct-sass-nodemon/package.json: Unexpected string in JSON at position 213
+  SyntaxError: /data/data/com.termux/files/home/rct-sass-nodemon/package.json: Unexpected token } in JSON at position 291
       at JSON.parse (<anonymous>)
       at /data/data/com.termux/files/usr/share/yarn/lib/cli.js:1625:59
       at Generator.next (<anonymous>)
@@ -29,8 +29,8 @@ npm manifest:
       "dev": "vite --host",
       "build": "vite build",
       "preview": "vite preview",
-      "start": "nodemon --exec 'yarn dev' --watch ./src/"
-      "scss": "sass ./src/index.scss ./src/index.css"
+      "start": "nodemon --exec 'yarn scss && yarn dev' --watch ./src/",
+      "scss": "sass --update ./src/assets/scss/ ./src/assets/css/",
     },
     "dependencies": {
       "react": "^17.0.2",

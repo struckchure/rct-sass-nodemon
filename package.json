@@ -6,7 +6,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "start": "nodemon --exec 'yarn scss && yarn dev' --watch ./src/",
-    "scss": "sass ./src/index.scss ./src/index.css"
+    "scss": "sass --update ./src/assets/scss/:./src/assets/css/"
   },
   "dependencies": {
     "react": "^17.0.2",
